@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -5,19 +6,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black; /* Set black background */
+    background-color: black; /* Black background for a romantic vibe */
     font-family: 'Arial', sans-serif;
 }
 
-.container {
-    text-align: center;
-}
-
+/* Heart Button */
 .heart {
     font-size: 2em;
     cursor: pointer;
     color: #ff4d4d;
     animation: beat 1s infinite;
+    text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d; /* Glow effect */
 }
 
 @keyframes beat {
@@ -25,16 +24,37 @@ body {
     50% { transform: scale(1.1); }
 }
 
+/* Center the Content */
+.container {
+    display: flex; /* Flexbox for centering */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Message Box */
 .message {
-    display: none;
+    display: none; /* Initially hidden */
     margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    border-radius: 10px; /* Rounded corners */
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in effect */
 }
 
 .message p {
     font-size: 1.5em;
-    color: white;
+    color: white; /* Ensure the text is visible */
+    line-height: 1.6; /* Improve readability */
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Buttons */
 .buttons button {
     margin: 10px;
     padding: 10px 20px;
@@ -51,40 +71,4 @@ body {
     background-color: #ff1a1a;
     transform: scale(1.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.big-heart {
-    font-size: 5em; /* Make it large */
-    color: #ff4d4d; /* Red heart */
-    cursor: pointer;
-    animation: beat 1s infinite;
-    text-shadow: 0 0 20px red, 0 0 30px red; /* Glow effect */
-}
-
-.container {
-    display: none; /* Hide the message initially */
-    text-align: center;
-}
-
-.message {
-    margin-top: 20px;
-}
-
-.message p {
-    font-size: 1.5em;
-    color: white; /* White text for black background */
-}
-
-.message {
-    display: none;
-    margin-top: 20px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Darker background for contrast */
-    border-radius: 10px;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
 }
