@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -26,23 +26,20 @@
             </div>
         </div>
 
-        <!-- Hidden SoundCloud Player for Background Audio -->
-        <div style="display: none;">
-            <iframe 
-                id="background-audio"
-                width="100%" 
-                height="166" 
-                scrolling="no" 
-                frameborder="no" 
-                allow="autoplay" 
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/520457732&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
-            </iframe>
-        </div>
+        <!-- SoundCloud Player for Background Audio -->
+        <iframe 
+            id="background-audio"
+            width="100%" 
+            height="166" 
+            scrolling="no" 
+            frameborder="no" 
+            allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/520457732&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+        </iframe>
     </div>
 
-    <!-- JavaScript -->
     <script>
-        // Function to handle the big heart click
+        // Function to handle the heart click
         function openMessage() {
             document.querySelector('.heart').style.display = 'none'; // Hide the heart
             document.querySelector('.message').style.display = 'block'; // Show the message container
@@ -68,15 +65,6 @@
         function tryAgain() {
             alert("Please try again! ❤️");
         }
-
-        // Play SoundCloud audio when the page loads
-        window.onload = function () {
-            const audioIframe = document.getElementById("background-audio");
-            if (audioIframe) {
-                // Programmatically reload the iframe to ensure autoplay
-                audioIframe.src += "&auto_play=true";
-            }
-        };
     </script>
 </body>
 </html>
