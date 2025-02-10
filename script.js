@@ -1,13 +1,13 @@
-// Function to handle the heart click
-function openMessage() {
-    const heart = document.querySelector('.heart'); // The clickable heart
-    const message = document.querySelector('.message'); // The message container
+// Function to reveal the message and play music
+function openMessageAndPlayMusic() {
+    document.querySelector('.heart').style.display = 'none'; // Hide the heart
+    document.querySelector('.message').style.display = 'block'; // Show the message container
 
-    if (heart && message) {
-        heart.style.display = 'none'; // Hide the heart
-        message.style.display = 'block'; // Show the message
-    } else {
-        console.error("Heart or message element is missing!");
+    var audio = document.getElementById('background-music');
+    if (audio.paused) {
+        audio.play().catch(function(error) {
+            console.log('Playback error:', error);
+        });
     }
 }
 
@@ -20,7 +20,7 @@ function confettiBurst() {
     confettiScript.onload = function () {
         confetti({
             particleCount: 200,
-            spread: 100
+            spread: 100,
         });
     };
 
