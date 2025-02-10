@@ -1,28 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
     <div class="container">
+        <!-- The heart element -->
         <div class="heart" onclick="openMessage()">
             ❤️ Will You Be My Valentine?
         </div>
+
+        <!-- The hidden message -->
         <div class="message" id="message">
-            <p>Hello, my beloved future wife 😊,<br><br>
+            <p>Hello, my beloved future wife :blush:,<br><br>
             It breaks my heart that I can’t be there to ask you this in person, so I made this just for you instead.<br>
             <strong>I love you so much</strong>, and nothing would make me happier than having you as my Valentine. <br><br>
             I know things have been tough, but I promise you I will do whatever it takes to build the future we dream of together. You are my happiness, my love, and my everything.<br><br>
-            <strong>I love you more than words can say… (so please say yes! 😆💕)</strong></p>
+            <strong>I love you more than words can say… (so please say yes! :laughing::two_hearts:)</strong></p>
             <div class="buttons">
                 <button onclick="confettiBurst()">Yes</button>
                 <button onclick="tryAgain()">No</button>
             </div>
         </div>
+
+        <!-- Embedded YouTube Video -->
+        <div class="song">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/mukiMaOSLEs?autoplay=1&loop=1&playlist=mukiMaOSLEs" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
-</html>
