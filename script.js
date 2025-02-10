@@ -1,7 +1,7 @@
-// Function to handle the big heart click
+// Function to handle the heart click
 function openMessage() {
-    document.querySelector('.big-heart').style.display = 'none'; // Hide the big heart
-    document.querySelector('.container').style.display = 'block'; // Show the message container
+    document.querySelector('.heart').style.display = 'none'; // Hide the heart
+    document.querySelector('.message').style.display = 'block'; // Show the message
 }
 
 // Function for the confetti effect
@@ -11,7 +11,10 @@ function confettiBurst() {
     document.body.appendChild(confettiScript);
 
     confettiScript.onload = function () {
-        confetti();
+        confetti({
+            particleCount: 200,
+            spread: 100
+        });
     };
 
     alert("Yay! You made me the happiest person alive! ❤️");
