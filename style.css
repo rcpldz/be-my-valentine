@@ -5,10 +5,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f9e3e3;
+    background-color: black;
     font-family: 'Arial', sans-serif;
-    background-image: url('fc0dc2ca6f6dac4da439a1473f5816c0.jpg'), url('IMG_2584.jpg');
-    background-size: cover;
+    background-image: none;    background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
 }
