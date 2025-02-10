@@ -91,3 +91,7 @@ body {
     height: 1px;
     opacity: 0;
 }
+
+#background-music {
+    display: none;
+}
