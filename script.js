@@ -4,10 +4,17 @@ function openMessage() {
 }
 
 function confettiBurst() {
-    // Add confetti effect here
+    const confettiScript = document.createElement('script');
+    confettiScript.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js";
+    document.body.appendChild(confettiScript);
+
+    confettiScript.onload = function () {
+        confetti();
+    };
+
     alert("Yay! You made me the happiest person alive! ❤️");
-    // You can use a confetti library like https://www.kirilv.com/canvas-confetti/
 }
+
 
 function tryAgain() {
     alert("Please try again! ❤️");
