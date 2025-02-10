@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
 </head>
 <body>
     <div class="container">
-        <!-- Pulsing Heart -->
+        <!-- The heart element -->
         <div class="heart" onclick="openMessage()">
             ❤️ Will You Be My Valentine?
         </div>
 
-        <!-- Hidden Message -->
+        <!-- The hidden message -->
         <div class="message" id="message">
             <p>Hello, my beloved future wife,<br><br>
             It breaks my heart that I can’t be there to ask you this in person, so I made this just for you instead.<br>
@@ -26,17 +26,57 @@
             </div>
         </div>
 
-        <!-- Hidden YouTube Audio -->
+        <!-- Hidden SoundCloud Player for Background Audio -->
         <div style="display: none;">
             <iframe 
                 id="background-audio"
-                src="https://www.youtube.com/embed/mukiMaOSLEs?autoplay=1&loop=1&playlist=mukiMaOSLEs"
-                frameborder="0"
-                allow="autoplay"
-                allowfullscreen>
+                width="100%" 
+                height="166" 
+                scrolling="no" 
+                frameborder="no" 
+                allow="autoplay" 
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189838292&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
             </iframe>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to handle the big heart click
+        function openMessage() {
+            document.querySelector('.heart').style.display = 'none'; // Hide the heart
+            document.querySelector('.message').style.display = 'block'; // Show the message container
+        }
+
+        // Function for the confetti effect
+        function confettiBurst() {
+            const confettiScript = document.createElement('script');
+            confettiScript.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js";
+            document.body.appendChild(confettiScript);
+
+            confettiScript.onload = function () {
+                confetti({
+                    particleCount: 200,
+                    spread: 100,
+                });
+            };
+
+            alert("Yay! You made me the happiest person alive! ❤️");
+        }
+
+        // Function for the "Try Again" button
+        function tryAgain() {
+            alert("Please try again! ❤️");
+        }
+
+        // Play SoundCloud audio when the page loads
+        window.onload = function () {
+            const audioIframe = document.getElementById("background-audio");
+            if (audioIframe) {
+                // Programmatically reload the iframe to ensure autoplay
+                audioIframe.src += "&auto_play=true";
+            }
+        };
+    </script>
 </body>
 </html>
