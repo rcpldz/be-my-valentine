@@ -1,7 +1,14 @@
 // Function to handle the heart click
 function openMessage() {
-    document.querySelector('.heart').style.display = 'none'; // Hide the heart
-    document.querySelector('.message').style.display = 'block'; // Show the message
+    const heart = document.querySelector('.heart'); // The clickable heart
+    const message = document.querySelector('.message'); // The message container
+
+    if (heart && message) {
+        heart.style.display = 'none'; // Hide the heart
+        message.style.display = 'block'; // Show the message
+    } else {
+        console.error("Heart or message element is missing!");
+    }
 }
 
 // Function for the confetti effect
