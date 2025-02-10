@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9e3e3;
+    font-family: 'Arial', sans-serif;
+    background-image: url('path-to-your-rose-image.jpg'), url('path-to-your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.container {
+    text-align: center;
+}
+
+.heart {
+    font-size: 2em;
+    cursor: pointer;
+    color: #ff4d4d;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.message {
+    display: none;
+    margin-top: 20px;
+}
+
+.message p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.buttons button:hover {
+    background-color: #ff1a1a;
+}
