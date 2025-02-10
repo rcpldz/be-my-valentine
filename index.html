@@ -1,11 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <div class="container">
-        <!-- The heart element -->
+        <!-- Pulsing Heart -->
         <div class="heart" onclick="openMessage()">
             ❤️ Will You Be My Valentine?
         </div>
 
-        <!-- The hidden message -->
+        <!-- Hidden Message -->
         <div class="message" id="message">
             <p>Hello, my beloved future wife :blush:,<br><br>
             It breaks my heart that I can’t be there to ask you this in person, so I made this just for you instead.<br>
@@ -19,10 +27,16 @@
         </div>
 
         <!-- Hidden YouTube Audio -->
-        <audio id="background-audio" autoplay loop>
-            <source src="https://www.youtube.com/embed/mukiMaOSLEs?autoplay=1&loop=1&playlist=mukiMaOSLEs" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div style="display: none;">
+            <iframe 
+                id="background-audio"
+                src="https://www.youtube.com/embed/mukiMaOSLEs?autoplay=1&loop=1&playlist=mukiMaOSLEs"
+                frameborder="0"
+                allow="autoplay"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+</html>
