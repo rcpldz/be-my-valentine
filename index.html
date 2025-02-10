@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <!-- The heart element -->
-        <div class="heart" onclick="openMessage()">
+        <div class="heart" onclick="openMessageAndPlayMusic()">
             ❤️ Will You Be My Valentine?
         </div>
 
@@ -26,23 +26,23 @@
             </div>
         </div>
 
-        <!-- SoundCloud Player for Background Audio -->
+        <!-- Hidden SoundCloud Player for Background Audio -->
         <iframe 
             id="background-audio"
-            width="100%" 
-            height="166" 
-            scrolling="no" 
-            frameborder="no" 
-            allow="autoplay" 
-            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/minecraftwizards/13-c418-wet-hands&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+            src="" 
+            frameborder="0" 
+            allow="autoplay">
         </iframe>
     </div>
 
     <script>
-        // Function to handle the heart click
-        function openMessage() {
+        // Function to reveal the message and play music
+        function openMessageAndPlayMusic() {
             document.querySelector('.heart').style.display = 'none'; // Hide the heart
             document.querySelector('.message').style.display = 'block'; // Show the message container
+            
+            // Set the SoundCloud iframe src to start playing music
+            document.getElementById("background-audio").src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false";
         }
 
         // Function for the confetti effect
